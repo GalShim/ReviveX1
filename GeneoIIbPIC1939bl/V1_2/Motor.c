@@ -14,7 +14,7 @@
         #include <p18f46k22.h>
     #else
         #ifdef SW_UC_PIC18F45K22
-            #include <p18f45k22.h>
+            #include "..\..\Revive\V1-0b\p18f45k22.h"
         #else
             #include <p18f25k22.h>
         #endif
@@ -25,7 +25,7 @@
 #include "General.h"
 #include "Types.h"
 #include "Eeprom_Pub.h"
-#include "Revive_Vsup_Pub.h"
+#include "..\..\Revive\V1-0b\Revive_Vsup_Pub.h"
 #include "Motor_Pub.h"
 #include "Motor_Loc.h"
 #include "..\..\GeneoIIbPIC1939bl\V1_2\App_Pub.h"

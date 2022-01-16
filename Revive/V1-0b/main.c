@@ -14,7 +14,7 @@
         #include <p18f46k22.h>
     #else
         #ifdef SW_UC_PIC18F45K22
-            #include <p18f45k22.h>
+            #include "p18f45k22.h"
         #else
             #include <p18f25k22.h>
         #endif
@@ -181,9 +181,9 @@ uint8 MaxSP_Int = 0;
 
 #ifdef SW_ROM_CHECK
  #ifdef SW_UC_PIC18F
-    const rom uint8* RomCheckAddr = (const rom uint8*)SW_ROM_ADDR_START;
-    const rom uint8* RomCheckAddrEnd = (const rom uint8*)SW_ROM_ADDR_END;
-    extern const rom uint8 RomChecksumByte;
+    const /*rom*/ uint8* RomCheckAddr = (const /*rom*/ uint8*)SW_ROM_ADDR_START;
+    const /*rom*/ uint8* RomCheckAddrEnd = (const /*rom*/ uint8*)SW_ROM_ADDR_END;
+    extern const /*rom*/ uint8 RomChecksumByte;
  #else
     const uint8* RomCheckAddr = (const uint8*)SW_ROM_ADDR_START;
     const uint8* RomCheckAddrEnd = (const uint8*)SW_ROM_ADDR_END;
@@ -290,28 +290,28 @@ void main (void)
     
     //Init
     Eeprom_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     #ifdef SW_TIP_MEM
       TipMem_TaskInit();
-      ClrWdt();
+      ClrWdt/*()*/;
     #endif
     Comm_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     Motor_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     Led_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     Keys_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     Adc_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     App_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     IO_TaskInit();
-    ClrWdt();
+    ClrWdt/*()*/;
     #ifdef SW_VSUP_GEN
      Revive_Vsup_TaskInit();
-     ClrWdt();
+     ClrWdt/*()*/;
     #endif
     
     //Main
@@ -320,7 +320,7 @@ void main (void)
         Comm_TaskMain();
           COMM_RX_HANDLE;
           COMM_TX_HANDLE;
-          ClrWdt();
+          ClrWdt/*()*/;
           SYSTEM_TICK;
           #ifdef SW_TICK_100US
            MOTOR_TICK;
@@ -544,7 +544,7 @@ void high_vector (void)
     #endif
     #ifdef SW_UC_PIC18F
         #pragma code checksum_byte=SW_ROM_ADDR_END
-        const rom uint8 RomChecksumByte = SW_ROM_CHECKSUM;
+        const /*rom*/ uint8 RomChecksumByte = SW_ROM_CHECKSUM;
     #endif
 #endif
 

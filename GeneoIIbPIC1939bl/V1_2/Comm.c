@@ -14,7 +14,7 @@
         #include <p18f46k22.h>
     #else
         #ifdef SW_UC_PIC18F45K22
-            #include <p18f45k22.h>
+            #include "..\..\Revive\V1-0b\p18f45k22.h"
         #else
             #include <p18f25k22.h>
         #endif
@@ -125,7 +125,7 @@ uint8 AttribValLen;
 uint8 CommTempEepromBuf[COMM_TEMP_EEPROM_BUF_LEN];              //Temporary save data (parameter) to EEPROM
 
 #ifdef SW_UC_PIC18F
- const rom COMM_TEXT_CODE_e Comm_ConvertAppEventToNameCode [APP_EVENT_num] = {
+ const /*rom*/ COMM_TEXT_CODE_e Comm_ConvertAppEventToNameCode [APP_EVENT_num] = {
 #else
  const COMM_TEXT_CODE_e Comm_ConvertAppEventToNameCode [APP_EVENT_num] = {
 #endif
@@ -267,7 +267,7 @@ uint8 Comm_GetEventState (uint8 EventCode)
 *  Utilities routines
 ******************************************************************************/
 #ifdef SW_UC_PIC18F
-    void Comm_CpyRom2Ram (uint8* Target, rom const uint8* Source, uint8 Length)
+    void Comm_CpyRom2Ram (uint8* Target, /*rom*/ const uint8* Source, uint8 Length)
     {
         while (Length)
         {
@@ -349,7 +349,7 @@ uint8 Comm_GetRxByte(void)
 //----------------------------
 //Memory compare RX buffer to text
 #ifdef SW_UC_PIC18F
- uint8 Comm_RxBufMemcmp (uint8 Index, const rom uint8* Addr, uint8 Len)
+ uint8 Comm_RxBufMemcmp (uint8 Index, const /*rom*/ uint8* Addr, uint8 Len)
 #else
  uint8 Comm_RxBufMemcmp (uint8 Index, const uint8* Addr, uint8 Len)
 #endif
@@ -804,9 +804,9 @@ void Comm_BuilderAddChar (uint8 NewChar)
 *    None
 ******************************************************************************/
 #ifdef SW_UC_PIC18F
-    void Comm_BuilderAddText (const rom uint8* TextAddr, uint8 TextLen)
+    void Comm_BuilderAddText (const /*rom*/ uint8* TextAddr, uint8 TextLen)
     {
-        Comm_CpyRom2Ram (&Comm_TxBuf[Comm_IntObj.OutData.TxIndex], (rom const uint8*)TextAddr, TextLen);
+        Comm_CpyRom2Ram (&Comm_TxBuf[Comm_IntObj.OutData.TxIndex], (/*rom*/ const uint8*)TextAddr, TextLen);
         Comm_IntObj.OutData.TxIndex += TextLen;
     }
 #else
@@ -861,7 +861,7 @@ void Comm_BuilderAddChar (uint8 NewChar)
 *    None
 ******************************************************************************/
 #ifdef SW_UC_PIC18F
- void Comm_BuilderAddAttribText (const rom uint8* AttribNameAddr, uint8 AttribNameLen, const rom uint8* AttribValAddr, uint8 AttribValLen)
+ void Comm_BuilderAddAttribText (const /*rom*/ uint8* AttribNameAddr, uint8 AttribNameLen, const /*rom*/ uint8* AttribValAddr, uint8 AttribValLen)
 #else
  void Comm_BuilderAddAttribText (const uint8* AttribNameAddr, uint8 AttribNameLen, const uint8* AttribValAddr, uint8 AttribValLen)
 #endif
@@ -875,7 +875,7 @@ void Comm_BuilderAddChar (uint8 NewChar)
 }
 //-----------------------------------------------------------------------------
 #ifdef SW_UC_PIC18F
- void Comm_BuilderAddAttribTextRam (const rom uint8* AttribNameAddr, uint8 AttribNameLen, uint8* AttribValAddr, uint8 AttribValLen)
+ void Comm_BuilderAddAttribTextRam (const /*rom*/ uint8* AttribNameAddr, uint8 AttribNameLen, uint8* AttribValAddr, uint8 AttribValLen)
 #else
  void Comm_BuilderAddAttribTextRam (const uint8* AttribNameAddr, uint8 AttribNameLen, uint8* AttribValAddr, uint8 AttribValLen)
 #endif
@@ -903,7 +903,7 @@ void Comm_BuilderAddChar (uint8 NewChar)
 *    None
 ******************************************************************************/
 #ifdef SW_UC_PIC18F
- void Comm_BuilderAddAttribNum (const rom uint8* AttribNameAddr, uint8 AttribNameLen, uint16 AttribVal, uint8 AttribValLen)
+ void Comm_BuilderAddAttribNum (const /*rom*/ uint8* AttribNameAddr, uint8 AttribNameLen, uint16 AttribVal, uint8 AttribValLen)
 #else
  void Comm_BuilderAddAttribNum (const uint8* AttribNameAddr, uint8 AttribNameLen, uint16 AttribVal, uint8 AttribValLen)
 #endif
@@ -1284,7 +1284,7 @@ void Comm_TaskMain (void)
                 Comm_Obj.Status.Flags.AddCloseEventTag = 1;
                 Comm_BuilderAddChar(COMM_MSG_TAG_END_BYTE);
                 Comm_BuilderAddChar(COMM_MSG_TAG_START_BYTE);
-                Comm_BuilderAddText((const rom uint8*)&CommTxt_Tag_module, CommTxt_Tag_module_LEN);
+                Comm_BuilderAddText((const /*rom*/ uint8*)&CommTxt_Tag_module, CommTxt_Tag_module_LEN);
                 Comm_GetAppInfo(COMM_TEXT_Attrib_id_module);
                 Comm_GetAppInfo(COMM_TEXT_Attrib_status_module);
                 Comm_GetAppInfo(COMM_TEXT_Attrib_reason);
@@ -1293,12 +1293,12 @@ void Comm_TaskMain (void)
                 Comm_Obj.Status.Flags.AddCloseEventTag = 1;
                 Comm_BuilderAddChar(COMM_MSG_TAG_END_BYTE);
                 Comm_BuilderAddChar(COMM_MSG_TAG_START_BYTE);
-                Comm_BuilderAddText((const rom uint8*)&CommTxt_Tag_module, CommTxt_Tag_module_LEN);
+                Comm_BuilderAddText((const /*rom*/ uint8*)&CommTxt_Tag_module, CommTxt_Tag_module_LEN);
                 Comm_GetAppInfo(COMM_TEXT_Attrib_id_module);
                 #ifdef SW_IGNORE_THERMISTOR
                   {                                                     //Thermistor not in use - send "NA"
                     uint8 TempBuf[APP_TECHINFO_PARAM_ID_TEMP_NA_LEN];
-                      Comm_CpyRom2Ram (&TempBuf[0], (rom const uint8*)&APP_TECHINFO_PARAM_ID_TEMP_NA[0], APP_TECHINFO_PARAM_ID_TEMP_NA_LEN);
+                      Comm_CpyRom2Ram (&TempBuf[0], (/*rom*/ const uint8*)&APP_TECHINFO_PARAM_ID_TEMP_NA[0], APP_TECHINFO_PARAM_ID_TEMP_NA_LEN);
                       Comm_BuilderAddAttribTextRam (CommTextTable[COMM_TEXT_Attrib_status_module].TextAddr, CommTextTable[COMM_TEXT_Attrib_status_module].TextLen, (uint8*)&TempBuf[0], APP_TECHINFO_PARAM_ID_TEMP_NA_LEN);
                   }
                 #else

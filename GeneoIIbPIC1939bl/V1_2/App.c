@@ -14,7 +14,7 @@
         #include <p18f46k22.h>
     #else
         #ifdef SW_UC_PIC18F45K22
-            #include <p18f45k22.h>
+            #include "..\..\Revive\V1-0b\p18f45k22.h"
         #else
             #include <p18f25k22.h>
         #endif
@@ -105,7 +105,7 @@ struct{
 #endif
 
 #ifdef SW_UC_PIC18F
-   const rom uint8* TextAddr;
+   const /*rom*/ uint8* TextAddr;
 #else
    const uint8* TextAddr;
 #endif
@@ -756,7 +756,7 @@ void App_PrepVal(uint16 Value)
     if (App_ConfigParamTempBuf[0] == '0')
     {
         #ifdef SW_UC_PIC18F
-            TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[1];
+            TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[1];
         #else
             TextAddr = (const uint8*)&App_ConfigParamTempBuf[1];
         #endif
@@ -765,7 +765,7 @@ void App_PrepVal(uint16 Value)
     else
     {
         #ifdef SW_UC_PIC18F
-            TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0];
+            TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0];
         #else
             TextAddr = (const uint8*)&App_ConfigParamTempBuf[0];
         #endif
@@ -787,8 +787,8 @@ void App_PrepInt (uint16 IntVal)
         App_ConfigParamTempBuf[i] = (IntVal%10) | 0x30;
         IntVal /= 10;
     }
-    //TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0] + 4;
-    TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0] + i;
+    //TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0] + 4;
+    TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0] + i;
     TextLen = 5 - i;
 }    
 
@@ -860,7 +860,7 @@ void App_GetInfo (COMM_TEXT_CODE_e AttribCode, uint8* AttribAddr, uint8* AttribL
             TextLen = 1;
         }
         #ifdef SW_UC_PIC18F
-            TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0];
+            TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0];
         #else
             TextAddr = &App_ConfigParamTempBuf[0];
         #endif
@@ -974,7 +974,7 @@ void App_GetInfo (COMM_TEXT_CODE_e AttribCode, uint8* AttribAddr, uint8* AttribL
                 break;
               case APP_EVENT_TIPINFO_info:
                 App_ConfigParamTempBuf[0] = TipMem_GetId();
-                TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0];
+                TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0];
                 TextLen = 1;
                 TextFromRom = FALSE;
                 break;
@@ -1048,7 +1048,7 @@ void App_GetInfo (COMM_TEXT_CODE_e AttribCode, uint8* AttribAddr, uint8* AttribL
              App_ConfigParamTempBuf[1] = (TempValue%10) | 0x30;
              TempValue /= 10;
              App_ConfigParamTempBuf[0] = TempValue | 0x30;
-             TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0];
+             TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0];
              TextLen = 4;
              if (App_ConfigParamTempBuf[0] == '0')
              {
@@ -1086,7 +1086,7 @@ void App_GetInfo (COMM_TEXT_CODE_e AttribCode, uint8* AttribAddr, uint8* AttribL
                  break;
                case APP_EVENT_TECH_INFO_TipId:
                  App_ConfigParamTempBuf[0] = TipMem_GetId();
-                 TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0];
+                 TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0];
                  TextLen = 1;
                  TextFromRom = FALSE;
                  break;
@@ -1207,7 +1207,7 @@ void App_GetInfo (COMM_TEXT_CODE_e AttribCode, uint8* AttribAddr, uint8* AttribL
             TextAddr++;
         }
         #ifdef SW_UC_PIC18F
-            TextAddr = (const rom uint8*)&App_ConfigParamTempBuf[0];
+            TextAddr = (const /*rom*/ uint8*)&App_ConfigParamTempBuf[0];
         #else
             TextAddr = (const uint8*)&App_ConfigParamTempBuf[0];
         #endif

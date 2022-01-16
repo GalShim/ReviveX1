@@ -14,7 +14,7 @@
         #include <p18f46k22.h>
     #else
         #ifdef SW_UC_PIC18F45K22
-            #include <p18f45k22.h>
+            #include "..\..\Revive\V1-0b\p18f45k22.h"
         #else
             #include <p18f25k22.h>
         #endif
@@ -116,7 +116,7 @@ uint16 StartTimer = 500; //10000; //3000;
     };
 #endif
 #ifdef SW_UC_PIC18F
-    rom const uint8 Adc_ConvertCodeToChannel[ADC_IN_num] = {
+    /*rom*/ const uint8 Adc_ConvertCodeToChannel[ADC_IN_num] = {
         13, //ADC_IN_12V_V
         31, //ADC_IN_5V_V           //Internal
         11, //ADC_IN_SupCur_I
@@ -131,7 +131,7 @@ uint16 StartTimer = 500; //10000; //3000;
 //--------------------------------------------------------------
 #define ADC_TEMPTABLE_LEN ((50-5)+1+2)
 #ifdef SW_UC_PIC18F
- const rom struct{                  
+ const /*rom*/ struct{                  
 #else
  const struct{                  
 #endif

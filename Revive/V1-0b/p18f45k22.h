@@ -7,8 +7,8 @@
 #ifndef __18F45K22_H
 #define __18F45K22_H
 
-extern volatile far  unsigned char       ANSELA;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       ANSELA;
+extern volatile /*far*/  struct {
   unsigned ANSA0:1;
   unsigned ANSA1:1;
   unsigned ANSA2:1;
@@ -16,8 +16,8 @@ extern volatile far  struct {
   unsigned :1;
   unsigned ANSA5:1;
 } ANSELAbits;
-extern volatile far  unsigned char       ANSELB;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       ANSELB;
+extern volatile /*far*/  struct {
   unsigned ANSB0:1;
   unsigned ANSB1:1;
   unsigned ANSB2:1;
@@ -25,8 +25,8 @@ extern volatile far  struct {
   unsigned ANSB4:1;
   unsigned ANSB5:1;
 } ANSELBbits;
-extern volatile far  unsigned char       ANSELC;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       ANSELC;
+extern volatile /*far*/  struct {
   unsigned :2;
   unsigned ANSC2:1;
   unsigned ANSC3:1;
@@ -35,8 +35,8 @@ extern volatile far  struct {
   unsigned ANSC6:1;
   unsigned ANSC7:1;
 } ANSELCbits;
-extern volatile far  unsigned char       ANSELD;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       ANSELD;
+extern volatile /*far*/  struct {
   unsigned ANSD0:1;
   unsigned ANSD1:1;
   unsigned ANSD2:1;
@@ -46,21 +46,21 @@ extern volatile far  struct {
   unsigned ANSD6:1;
   unsigned ANSD7:1;
 } ANSELDbits;
-extern volatile far  unsigned char       ANSELE;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       ANSELE;
+extern volatile /*far*/  struct {
   unsigned ANSE0:1;
   unsigned ANSE1:1;
   unsigned ANSE2:1;
 } ANSELEbits;
-extern volatile far  unsigned char       PMD2;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       PMD2;
+extern volatile /*far*/  struct {
   unsigned ADCMD:1;
   unsigned CMP1MD:1;
   unsigned CMP2MD:1;
   unsigned CTMUMD:1;
 } PMD2bits;
-extern volatile far  unsigned char       PMD1;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       PMD1;
+extern volatile /*far*/  struct {
   unsigned CCP1MD:1;
   unsigned CCP2MD:1;
   unsigned CCP3MD:1;
@@ -70,8 +70,8 @@ extern volatile far  struct {
   unsigned MSSP1MD:1;
   unsigned MSSP2MD:1;
 } PMD1bits;
-extern volatile far  unsigned char       PMD0;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       PMD0;
+extern volatile /*far*/  struct {
   unsigned TMR1MD:1;
   unsigned TMR2MD:1;
   unsigned TMR3MD:1;
@@ -81,8 +81,8 @@ extern volatile far  struct {
   unsigned UART1MD:1;
   unsigned UART2MD:1;
 } PMD0bits;
-extern volatile far  unsigned char       DACCON1;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       DACCON1;
+extern volatile /*far*/  union {
   struct {
     unsigned DACR:5;
   };
@@ -94,8 +94,8 @@ extern volatile far  union {
     unsigned DACR4:1;
   };
 } DACCON1bits;
-extern volatile far  unsigned char       VREFCON2;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       VREFCON2;
+extern volatile /*far*/  union {
   struct {
     unsigned DACR:5;
   };
@@ -107,8 +107,8 @@ extern volatile far  union {
     unsigned DACR4:1;
   };
 } VREFCON2bits;
-extern volatile far  unsigned char       DACCON0;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       DACCON0;
+extern volatile /*far*/  union {
   struct {
     unsigned DACNSS:1;
     unsigned :1;
@@ -124,8 +124,8 @@ extern volatile far  union {
     unsigned DACPSS1:1;
   };
 } DACCON0bits;
-extern volatile far  unsigned char       VREFCON1;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       VREFCON1;
+extern volatile /*far*/  union {
   struct {
     unsigned DACNSS:1;
     unsigned :1;
@@ -141,8 +141,8 @@ extern volatile far  union {
     unsigned DACPSS1:1;
   };
 } VREFCON1bits;
-extern volatile far  unsigned char       FVRCON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       FVRCON;
+extern volatile /*far*/  union {
   struct {
     unsigned :4;
     unsigned FVRS:2;
@@ -155,8 +155,8 @@ extern volatile far  union {
     unsigned FVRS1:1;
   };
 } FVRCONbits;
-extern volatile far  unsigned char       VREFCON0;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       VREFCON0;
+extern volatile /*far*/  union {
   struct {
     unsigned :4;
     unsigned FVRS:2;
@@ -169,8 +169,8 @@ extern volatile far  union {
     unsigned FVRS1:1;
   };
 } VREFCON0bits;
-extern volatile far  unsigned char       CTMUICON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CTMUICON;
+extern volatile /*far*/  union {
   struct {
     unsigned IRNG:2;
     unsigned ITRIM:6;
@@ -186,8 +186,8 @@ extern volatile far  union {
     unsigned ITRIM5:1;
   };
 } CTMUICONbits;
-extern volatile far  unsigned char       CTMUICONH;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CTMUICONH;
+extern volatile /*far*/  union {
   struct {
     unsigned IRNG:2;
     unsigned ITRIM:6;
@@ -203,8 +203,8 @@ extern volatile far  union {
     unsigned ITRIM5:1;
   };
 } CTMUICONHbits;
-extern volatile far  unsigned char       CTMUCON1;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CTMUCON1;
+extern volatile /*far*/  union {
   struct {
     unsigned EDG1STAT:1;
     unsigned EDG2STAT:1;
@@ -222,8 +222,8 @@ extern volatile far  union {
     unsigned EDG2SEL1:1;
   };
 } CTMUCON1bits;
-extern volatile far  unsigned char       CTMUCONL;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CTMUCONL;
+extern volatile /*far*/  union {
   struct {
     unsigned EDG1STAT:1;
     unsigned EDG2STAT:1;
@@ -241,8 +241,8 @@ extern volatile far  union {
     unsigned EDG2SEL1:1;
   };
 } CTMUCONLbits;
-extern volatile far  unsigned char       CTMUCON0;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       CTMUCON0;
+extern volatile /*far*/  struct {
   unsigned CTTRIG:1;
   unsigned IDISSEN:1;
   unsigned EDGSEQEN:1;
@@ -252,8 +252,8 @@ extern volatile far  struct {
   unsigned :1;
   unsigned CTMUEN:1;
 } CTMUCON0bits;
-extern volatile far  unsigned char       CTMUCONH;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       CTMUCONH;
+extern volatile /*far*/  struct {
   unsigned CTTRIG:1;
   unsigned IDISSEN:1;
   unsigned EDGSEQEN:1;
@@ -263,8 +263,8 @@ extern volatile far  struct {
   unsigned :1;
   unsigned CTMUEN:1;
 } CTMUCONHbits;
-extern volatile far  unsigned char       SRCON1;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned char       SRCON1;
+extern volatile /*far*/  struct {
   unsigned SRRC1E:1;
   unsigned SRRC2E:1;
   unsigned SRRCKE:1;
@@ -274,8 +274,8 @@ extern volatile far  struct {
   unsigned SRSCKE:1;
   unsigned SRSPE:1;
 } SRCON1bits;
-extern volatile far  unsigned char       SRCON0;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       SRCON0;
+extern volatile /*far*/  union {
   struct {
     unsigned SRPR:1;
     unsigned SRPS:1;
@@ -291,8 +291,8 @@ extern volatile far  union {
     unsigned SRCLK2:1;
   };
 } SRCON0bits;
-extern volatile far  unsigned char       CCPTMRS1;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CCPTMRS1;
+extern volatile /*far*/  union {
   struct {
     unsigned C4TSEL:2;
     unsigned C5TSEL:2;
@@ -304,8 +304,8 @@ extern volatile far  union {
     unsigned C5TSEL1:1;
   };
 } CCPTMRS1bits;
-extern volatile far  unsigned char       CCPTMRS0;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CCPTMRS0;
+extern volatile /*far*/  union {
   struct {
     unsigned C1TSEL:2;
     unsigned :1;
@@ -324,8 +324,8 @@ extern volatile far  union {
     unsigned C3TSEL1:1;
   };
 } CCPTMRS0bits;
-extern volatile far  unsigned char       T6CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       T6CON;
+extern volatile /*far*/  union {
   struct {
     unsigned T6CKPS:2;
     unsigned TMR6ON:1;
@@ -341,10 +341,10 @@ extern volatile far  union {
     unsigned T6OUTPS3:1;
   };
 } T6CONbits;
-extern volatile far  unsigned char       PR6;
-extern volatile far  unsigned char       TMR6;
-extern volatile far  unsigned char       T5GCON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       PR6;
+extern volatile /*far*/  unsigned char       TMR6;
+extern volatile /*far*/  unsigned char       T5GCON;
+extern volatile /*far*/  union {
   struct {
     unsigned T5GSS:2;
     unsigned T5GVAL:1;
@@ -365,8 +365,8 @@ extern volatile far  union {
     unsigned T5G_DONE:1;
   };
 } T5GCONbits;
-extern volatile far  unsigned char       T5CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       T5CON;
+extern volatile /*far*/  union {
   struct {
     unsigned TMR5ON:1;
     unsigned T5RD16:1;
@@ -385,10 +385,10 @@ extern volatile far  union {
     unsigned TMR5CS1:1;
   };
 } T5CONbits;
-extern volatile far  unsigned char       TMR5L;
-extern volatile far  unsigned char       TMR5H;
-extern volatile far  unsigned char       T4CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       TMR5L;
+extern volatile /*far*/  unsigned char       TMR5H;
+extern volatile /*far*/  unsigned char       T4CON;
+extern volatile /*far*/  union {
   struct {
     unsigned T4CKPS:2;
     unsigned TMR4ON:1;
@@ -404,10 +404,10 @@ extern volatile far  union {
     unsigned T4OUTPS3:1;
   };
 } T4CONbits;
-extern volatile far  unsigned char       PR4;
-extern volatile far  unsigned char       TMR4;
-extern volatile far  unsigned char       CCP5CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       PR4;
+extern volatile /*far*/  unsigned char       TMR4;
+extern volatile /*far*/  unsigned char       CCP5CON;
+extern volatile /*far*/  union {
   struct {
     unsigned CCP5M:4;
     unsigned DC5B:2;
@@ -421,11 +421,11 @@ extern volatile far  union {
     unsigned DC5B1:1;
   };
 } CCP5CONbits;
-extern volatile far  unsigned            CCPR5;
-extern volatile far  unsigned char       CCPR5L;
-extern volatile far  unsigned char       CCPR5H;
-extern volatile far  unsigned char       CCP4CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned            CCPR5;
+extern volatile /*far*/  unsigned char       CCPR5L;
+extern volatile /*far*/  unsigned char       CCPR5H;
+extern volatile /*far*/  unsigned char       CCP4CON;
+extern volatile /*far*/  union {
   struct {
     unsigned CCP4M:4;
     unsigned DC4B:2;
@@ -439,19 +439,19 @@ extern volatile far  union {
     unsigned DC4B1:1;
   };
 } CCP4CONbits;
-extern volatile far  unsigned            CCPR4;
-extern volatile far  unsigned char       CCPR4L;
-extern volatile far  unsigned char       CCPR4H;
-extern volatile far  unsigned char       PSTR3CON;
-extern volatile far  struct {
+extern volatile /*far*/  unsigned            CCPR4;
+extern volatile /*far*/  unsigned char       CCPR4L;
+extern volatile /*far*/  unsigned char       CCPR4H;
+extern volatile /*far*/  unsigned char       PSTR3CON;
+extern volatile /*far*/  struct {
   unsigned STR3A:1;
   unsigned STR3B:1;
   unsigned STR3C:1;
   unsigned STR3D:1;
   unsigned STR3SYNC:1;
 } PSTR3CONbits;
-extern volatile far  unsigned char       CCP3AS;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CCP3AS;
+extern volatile /*far*/  union {
   struct {
     unsigned P3SSBD:2;
     unsigned P3SSAC:2;
@@ -478,8 +478,8 @@ extern volatile far  union {
     unsigned PSS3AC1:1;
   };
 } CCP3ASbits;
-extern volatile far  unsigned char       ECCP3AS;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       ECCP3AS;
+extern volatile /*far*/  union {
   struct {
     unsigned P3SSBD:2;
     unsigned P3SSAC:2;
@@ -506,8 +506,8 @@ extern volatile far  union {
     unsigned PSS3AC1:1;
   };
 } ECCP3ASbits;
-extern volatile far  unsigned char       PWM3CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       PWM3CON;
+extern volatile /*far*/  union {
   struct {
     unsigned P3DC:7;
     unsigned P3RSEN:1;
@@ -522,8 +522,8 @@ extern volatile far  union {
     unsigned P3DC6:1;
   };
 } PWM3CONbits;
-extern volatile far  unsigned char       CCP3CON;
-extern volatile far  union {
+extern volatile /*far*/  unsigned char       CCP3CON;
+extern volatile /*far*/  union {
   struct {
     unsigned CCP3M:4;
     unsigned DC3B:2;
@@ -540,19 +540,19 @@ extern volatile far  union {
     unsigned P3M1:1;
   };
 } CCP3CONbits;
-extern volatile far  unsigned            CCPR3;
-extern volatile far  unsigned char       CCPR3L;
-extern volatile far  unsigned char       CCPR3H;
-extern volatile near unsigned char       SLRCON;
-extern volatile near struct {
+extern volatile /*far*/  unsigned            CCPR3;
+extern volatile /*far*/  unsigned char       CCPR3L;
+extern volatile /*far*/  unsigned char       CCPR3H;
+extern volatile /*near*/ unsigned char       SLRCON;
+extern volatile /*near*/ struct {
   unsigned SLRA:1;
   unsigned SLRB:1;
   unsigned SLRC:1;
   unsigned SLRD:1;
   unsigned SLRE:1;
 } SLRCONbits;
-extern volatile near unsigned char       WPUB;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       WPUB;
+extern volatile /*near*/ struct {
   unsigned WPUB0:1;
   unsigned WPUB1:1;
   unsigned WPUB2:1;
@@ -562,24 +562,24 @@ extern volatile near struct {
   unsigned WPUB6:1;
   unsigned WPUB7:1;
 } WPUBbits;
-extern volatile near unsigned char       IOCB;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       IOCB;
+extern volatile /*near*/ struct {
   unsigned :4;
   unsigned IOCB4:1;
   unsigned IOCB5:1;
   unsigned IOCB6:1;
   unsigned IOCB7:1;
 } IOCBbits;
-extern volatile near unsigned char       PSTR2CON;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PSTR2CON;
+extern volatile /*near*/ struct {
   unsigned STR2A:1;
   unsigned STR2B:1;
   unsigned STR2C:1;
   unsigned STR2D:1;
   unsigned STR2SYNC:1;
 } PSTR2CONbits;
-extern volatile near unsigned char       CCP2AS;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       CCP2AS;
+extern volatile /*near*/ union {
   struct {
     unsigned P2SSBD:2;
     unsigned P2SSAC:2;
@@ -606,8 +606,8 @@ extern volatile near union {
     unsigned PSS2AC1:1;
   };
 } CCP2ASbits;
-extern volatile near unsigned char       ECCP2AS;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       ECCP2AS;
+extern volatile /*near*/ union {
   struct {
     unsigned P2SSBD:2;
     unsigned P2SSAC:2;
@@ -634,8 +634,8 @@ extern volatile near union {
     unsigned PSS2AC1:1;
   };
 } ECCP2ASbits;
-extern volatile near unsigned char       PWM2CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PWM2CON;
+extern volatile /*near*/ union {
   struct {
     unsigned P2DC:7;
     unsigned P2RSEN:1;
@@ -650,8 +650,8 @@ extern volatile near union {
     unsigned P2DC6:1;
   };
 } PWM2CONbits;
-extern volatile near unsigned char       CCP2CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       CCP2CON;
+extern volatile /*near*/ union {
   struct {
     unsigned CCP2M:4;
     unsigned DC2B:2;
@@ -668,11 +668,11 @@ extern volatile near union {
     unsigned P2M1:1;
   };
 } CCP2CONbits;
-extern volatile near unsigned            CCPR2;
-extern volatile near unsigned char       CCPR2L;
-extern volatile near unsigned char       CCPR2H;
-extern volatile near unsigned char       SSP2CON3;
-extern volatile near struct {
+extern volatile /*near*/ unsigned            CCPR2;
+extern volatile /*near*/ unsigned char       CCPR2L;
+extern volatile /*near*/ unsigned char       CCPR2H;
+extern volatile /*near*/ unsigned char       SSP2CON3;
+extern volatile /*near*/ struct {
   unsigned DHEN:1;
   unsigned AHEN:1;
   unsigned SBCDE:1;
@@ -682,8 +682,8 @@ extern volatile near struct {
   unsigned PCIE:1;
   unsigned ACKTIM:1;
 } SSP2CON3bits;
-extern volatile near unsigned char       SSP2MSK;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSP2MSK;
+extern volatile /*near*/ struct {
   unsigned MSK0:1;
   unsigned MSK1:1;
   unsigned MSK2:1;
@@ -693,8 +693,8 @@ extern volatile near struct {
   unsigned MSK6:1;
   unsigned MSK7:1;
 } SSP2MSKbits;
-extern volatile near unsigned char       SSP2CON2;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSP2CON2;
+extern volatile /*near*/ struct {
   unsigned SEN:1;
   unsigned RSEN:1;
   unsigned PEN:1;
@@ -704,8 +704,8 @@ extern volatile near struct {
   unsigned ACKSTAT:1;
   unsigned GCEN:1;
 } SSP2CON2bits;
-extern volatile near unsigned char       SSP2CON1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP2CON1;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPM:4;
     unsigned CKP:1;
@@ -720,8 +720,8 @@ extern volatile near union {
     unsigned SSPM3:1;
   };
 } SSP2CON1bits;
-extern volatile near unsigned char       SSP2STAT;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP2STAT;
+extern volatile /*near*/ union {
   struct {
     unsigned BF:1;
     unsigned UA:1;
@@ -763,10 +763,10 @@ extern volatile near union {
     unsigned NOT_ADDRESS:1;
   };
 } SSP2STATbits;
-extern volatile near unsigned char       SSP2ADD;
-extern volatile near unsigned char       SSP2BUF;
-extern volatile near unsigned char       BAUD2CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP2ADD;
+extern volatile /*near*/ unsigned char       SSP2BUF;
+extern volatile /*near*/ unsigned char       BAUD2CON;
+extern volatile /*near*/ union {
   struct {
     unsigned ABDEN:1;
     unsigned WUE:1;
@@ -782,8 +782,8 @@ extern volatile near union {
     unsigned SCKP:1;
   };
 } BAUD2CONbits;
-extern volatile near unsigned char       BAUDCON2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       BAUDCON2;
+extern volatile /*near*/ union {
   struct {
     unsigned ABDEN:1;
     unsigned WUE:1;
@@ -799,8 +799,8 @@ extern volatile near union {
     unsigned SCKP:1;
   };
 } BAUDCON2bits;
-extern volatile near unsigned char       RC2STA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RC2STA;
+extern volatile /*near*/ union {
   struct {
     unsigned RX9D:1;
     unsigned OERR:1;
@@ -826,8 +826,8 @@ extern volatile near union {
     unsigned SPEN2:1;
   };
 } RC2STAbits;
-extern volatile near unsigned char       RCSTA2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RCSTA2;
+extern volatile /*near*/ union {
   struct {
     unsigned RX9D:1;
     unsigned OERR:1;
@@ -853,8 +853,8 @@ extern volatile near union {
     unsigned SPEN2:1;
   };
 } RCSTA2bits;
-extern volatile near unsigned char       TX2STA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TX2STA;
+extern volatile /*near*/ union {
   struct {
     unsigned TX9D:1;
     unsigned TRMT:1;
@@ -876,8 +876,8 @@ extern volatile near union {
     unsigned CSRC2:1;
   };
 } TX2STAbits;
-extern volatile near unsigned char       TXSTA2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TXSTA2;
+extern volatile /*near*/ union {
   struct {
     unsigned TX9D:1;
     unsigned TRMT:1;
@@ -899,16 +899,16 @@ extern volatile near union {
     unsigned CSRC2:1;
   };
 } TXSTA2bits;
-extern volatile near unsigned char       TX2REG;
-extern volatile near unsigned char       TXREG2;
-extern volatile near unsigned char       RC2REG;
-extern volatile near unsigned char       RCREG2;
-extern volatile near unsigned char       SP2BRG;
-extern volatile near unsigned char       SPBRG2;
-extern volatile near unsigned char       SP2BRGH;
-extern volatile near unsigned char       SPBRGH2;
-extern volatile near unsigned char       CM12CON;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       TX2REG;
+extern volatile /*near*/ unsigned char       TXREG2;
+extern volatile /*near*/ unsigned char       RC2REG;
+extern volatile /*near*/ unsigned char       RCREG2;
+extern volatile /*near*/ unsigned char       SP2BRG;
+extern volatile /*near*/ unsigned char       SPBRG2;
+extern volatile /*near*/ unsigned char       SP2BRGH;
+extern volatile /*near*/ unsigned char       SPBRGH2;
+extern volatile /*near*/ unsigned char       CM12CON;
+extern volatile /*near*/ struct {
   unsigned C2SYNC:1;
   unsigned C1SYNC:1;
   unsigned C2HYS:1;
@@ -918,8 +918,8 @@ extern volatile near struct {
   unsigned MC2OUT:1;
   unsigned MC1OUT:1;
 } CM12CONbits;
-extern volatile near unsigned char       CM2CON1;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       CM2CON1;
+extern volatile /*near*/ struct {
   unsigned C2SYNC:1;
   unsigned C1SYNC:1;
   unsigned C2HYS:1;
@@ -929,8 +929,8 @@ extern volatile near struct {
   unsigned MC2OUT:1;
   unsigned MC1OUT:1;
 } CM2CON1bits;
-extern volatile near unsigned char       CM2CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       CM2CON;
+extern volatile /*near*/ union {
   struct {
     unsigned C2CH:2;
     unsigned C2R:1;
@@ -945,8 +945,8 @@ extern volatile near union {
     unsigned C2CH1:1;
   };
 } CM2CONbits;
-extern volatile near unsigned char       CM2CON0;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       CM2CON0;
+extern volatile /*near*/ union {
   struct {
     unsigned C2CH:2;
     unsigned C2R:1;
@@ -961,8 +961,8 @@ extern volatile near union {
     unsigned C2CH1:1;
   };
 } CM2CON0bits;
-extern volatile near unsigned char       CM1CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       CM1CON;
+extern volatile /*near*/ union {
   struct {
     unsigned C1CH:2;
     unsigned C1R:1;
@@ -977,8 +977,8 @@ extern volatile near union {
     unsigned C1CH1:1;
   };
 } CM1CONbits;
-extern volatile near unsigned char       CM1CON0;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       CM1CON0;
+extern volatile /*near*/ union {
   struct {
     unsigned C1CH:2;
     unsigned C1R:1;
@@ -993,44 +993,44 @@ extern volatile near union {
     unsigned C1CH1:1;
   };
 } CM1CON0bits;
-extern volatile near unsigned char       PIE4;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PIE4;
+extern volatile /*near*/ struct {
   unsigned CCP3IE:1;
   unsigned CCP4IE:1;
   unsigned CCP5IE:1;
 } PIE4bits;
-extern volatile near unsigned char       PIR4;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PIR4;
+extern volatile /*near*/ struct {
   unsigned CCP3IF:1;
   unsigned CCP4IF:1;
   unsigned CCP5IF:1;
 } PIR4bits;
-extern volatile near unsigned char       IPR4;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       IPR4;
+extern volatile /*near*/ struct {
   unsigned CCP3IP:1;
   unsigned CCP4IP:1;
   unsigned CCP5IP:1;
 } IPR4bits;
-extern volatile near unsigned char       PIE5;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PIE5;
+extern volatile /*near*/ struct {
   unsigned TMR4IE:1;
   unsigned TMR5IE:1;
   unsigned TMR6IE:1;
 } PIE5bits;
-extern volatile near unsigned char       PIR5;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PIR5;
+extern volatile /*near*/ struct {
   unsigned TMR4IF:1;
   unsigned TMR5IF:1;
   unsigned TMR6IF:1;
 } PIR5bits;
-extern volatile near unsigned char       IPR5;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       IPR5;
+extern volatile /*near*/ struct {
   unsigned TMR4IP:1;
   unsigned TMR5IP:1;
   unsigned TMR6IP:1;
 } IPR5bits;
-extern volatile near unsigned char       PORTA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PORTA;
+extern volatile /*near*/ union {
   struct {
     unsigned RA0:1;
     unsigned RA1:1;
@@ -1097,8 +1097,8 @@ extern volatile near union {
     unsigned SRNQ:1;
   };
 } PORTAbits;
-extern volatile near unsigned char       PORTB;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PORTB;
+extern volatile /*near*/ union {
   struct {
     unsigned RB0:1;
     unsigned RB1:1;
@@ -1159,8 +1159,8 @@ extern volatile near union {
     unsigned P3A:1;
   };
 } PORTBbits;
-extern volatile near unsigned char       PORTC;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PORTC;
+extern volatile /*near*/ union {
   struct {
     unsigned RC0:1;
     unsigned RC1:1;
@@ -1222,8 +1222,8 @@ extern volatile near union {
     unsigned AN19:1;
   };
 } PORTCbits;
-extern volatile near unsigned char       PORTD;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PORTD;
+extern volatile /*near*/ union {
   struct {
     unsigned RD0:1;
     unsigned RD1:1;
@@ -1277,8 +1277,8 @@ extern volatile near union {
     unsigned AN27:1;
   };
 } PORTDbits;
-extern volatile near unsigned char       PORTE;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PORTE;
+extern volatile /*near*/ union {
   struct {
     unsigned RE0:1;
     unsigned RE1:1;
@@ -1303,8 +1303,8 @@ extern volatile near union {
     unsigned VPP:1;
   };
 } PORTEbits;
-extern volatile near unsigned char       LATA;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       LATA;
+extern volatile /*near*/ struct {
   unsigned LATA0:1;
   unsigned LATA1:1;
   unsigned LATA2:1;
@@ -1314,8 +1314,8 @@ extern volatile near struct {
   unsigned LATA6:1;
   unsigned LATA7:1;
 } LATAbits;
-extern volatile near unsigned char       LATB;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       LATB;
+extern volatile /*near*/ struct {
   unsigned LATB0:1;
   unsigned LATB1:1;
   unsigned LATB2:1;
@@ -1325,8 +1325,8 @@ extern volatile near struct {
   unsigned LATB6:1;
   unsigned LATB7:1;
 } LATBbits;
-extern volatile near unsigned char       LATC;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       LATC;
+extern volatile /*near*/ struct {
   unsigned LATC0:1;
   unsigned LATC1:1;
   unsigned LATC2:1;
@@ -1336,8 +1336,8 @@ extern volatile near struct {
   unsigned LATC6:1;
   unsigned LATC7:1;
 } LATCbits;
-extern volatile near unsigned char       LATD;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       LATD;
+extern volatile /*near*/ struct {
   unsigned LATD0:1;
   unsigned LATD1:1;
   unsigned LATD2:1;
@@ -1347,14 +1347,14 @@ extern volatile near struct {
   unsigned LATD6:1;
   unsigned LATD7:1;
 } LATDbits;
-extern volatile near unsigned char       LATE;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       LATE;
+extern volatile /*near*/ struct {
   unsigned LATE0:1;
   unsigned LATE1:1;
   unsigned LATE2:1;
 } LATEbits;
-extern volatile near unsigned char       DDRA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       DDRA;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISA0:1;
     unsigned TRISA1:1;
@@ -1376,8 +1376,8 @@ extern volatile near union {
     unsigned RA7:1;
   };
 } DDRAbits;
-extern volatile near unsigned char       TRISA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TRISA;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISA0:1;
     unsigned TRISA1:1;
@@ -1399,8 +1399,8 @@ extern volatile near union {
     unsigned RA7:1;
   };
 } TRISAbits;
-extern volatile near unsigned char       DDRB;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       DDRB;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISB0:1;
     unsigned TRISB1:1;
@@ -1422,8 +1422,8 @@ extern volatile near union {
     unsigned RB7:1;
   };
 } DDRBbits;
-extern volatile near unsigned char       TRISB;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TRISB;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISB0:1;
     unsigned TRISB1:1;
@@ -1445,8 +1445,8 @@ extern volatile near union {
     unsigned RB7:1;
   };
 } TRISBbits;
-extern volatile near unsigned char       DDRC;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       DDRC;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISC0:1;
     unsigned TRISC1:1;
@@ -1468,8 +1468,8 @@ extern volatile near union {
     unsigned RC7:1;
   };
 } DDRCbits;
-extern volatile near unsigned char       TRISC;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TRISC;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISC0:1;
     unsigned TRISC1:1;
@@ -1491,8 +1491,8 @@ extern volatile near union {
     unsigned RC7:1;
   };
 } TRISCbits;
-extern volatile near unsigned char       DDRD;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       DDRD;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISD0:1;
     unsigned TRISD1:1;
@@ -1514,8 +1514,8 @@ extern volatile near union {
     unsigned RD7:1;
   };
 } DDRDbits;
-extern volatile near unsigned char       TRISD;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TRISD;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISD0:1;
     unsigned TRISD1:1;
@@ -1537,8 +1537,8 @@ extern volatile near union {
     unsigned RD7:1;
   };
 } TRISDbits;
-extern volatile near unsigned char       DDRE;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       DDRE;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISE0:1;
     unsigned TRISE1:1;
@@ -1552,8 +1552,8 @@ extern volatile near union {
     unsigned RE2:1;
   };
 } DDREbits;
-extern volatile near unsigned char       TRISE;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TRISE;
+extern volatile /*near*/ union {
   struct {
     unsigned TRISE0:1;
     unsigned TRISE1:1;
@@ -1567,8 +1567,8 @@ extern volatile near union {
     unsigned RE2:1;
   };
 } TRISEbits;
-extern volatile near unsigned char       OSCTUNE;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       OSCTUNE;
+extern volatile /*near*/ union {
   struct {
     unsigned TUN:6;
     unsigned PLLEN:1;
@@ -1583,8 +1583,8 @@ extern volatile near union {
     unsigned TUN5:1;
   };
 } OSCTUNEbits;
-extern volatile near unsigned char       HLVDCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       HLVDCON;
+extern volatile /*near*/ union {
   struct {
     unsigned HLVDL:4;
     unsigned HLVDEN:1;
@@ -1615,8 +1615,8 @@ extern volatile near union {
     unsigned BGST:1;
   };
 } HLVDCONbits;
-extern volatile near unsigned char       LVDCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       LVDCON;
+extern volatile /*near*/ union {
   struct {
     unsigned HLVDL:4;
     unsigned HLVDEN:1;
@@ -1647,8 +1647,8 @@ extern volatile near union {
     unsigned BGST:1;
   };
 } LVDCONbits;
-extern volatile near unsigned char       PIE1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PIE1;
+extern volatile /*near*/ union {
   struct {
     unsigned TMR1IE:1;
     unsigned TMR2IE:1;
@@ -1665,8 +1665,8 @@ extern volatile near union {
     unsigned RCIE:1;
   };
 } PIE1bits;
-extern volatile near unsigned char       PIR1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PIR1;
+extern volatile /*near*/ union {
   struct {
     unsigned TMR1IF:1;
     unsigned TMR2IF:1;
@@ -1683,8 +1683,8 @@ extern volatile near union {
     unsigned RCIF:1;
   };
 } PIR1bits;
-extern volatile near unsigned char       IPR1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       IPR1;
+extern volatile /*near*/ union {
   struct {
     unsigned TMR1IP:1;
     unsigned TMR2IP:1;
@@ -1701,8 +1701,8 @@ extern volatile near union {
     unsigned RCIP:1;
   };
 } IPR1bits;
-extern volatile near unsigned char       PIE2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PIE2;
+extern volatile /*near*/ union {
   struct {
     unsigned CCP2IE:1;
     unsigned TMR3IE:1;
@@ -1719,8 +1719,8 @@ extern volatile near union {
     unsigned BCLIE:1;
   };
 } PIE2bits;
-extern volatile near unsigned char       PIR2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PIR2;
+extern volatile /*near*/ union {
   struct {
     unsigned CCP2IF:1;
     unsigned TMR3IF:1;
@@ -1737,8 +1737,8 @@ extern volatile near union {
     unsigned BCLIF:1;
   };
 } PIR2bits;
-extern volatile near unsigned char       IPR2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       IPR2;
+extern volatile /*near*/ union {
   struct {
     unsigned CCP2IP:1;
     unsigned TMR3IP:1;
@@ -1755,8 +1755,8 @@ extern volatile near union {
     unsigned BCLIP:1;
   };
 } IPR2bits;
-extern volatile near unsigned char       PIE3;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PIE3;
+extern volatile /*near*/ struct {
   unsigned TMR1GIE:1;
   unsigned TMR3GIE:1;
   unsigned TMR5GIE:1;
@@ -1766,8 +1766,8 @@ extern volatile near struct {
   unsigned BCL2IE:1;
   unsigned SSP2IE:1;
 } PIE3bits;
-extern volatile near unsigned char       PIR3;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PIR3;
+extern volatile /*near*/ struct {
   unsigned TMR1GIF:1;
   unsigned TMR3GIF:1;
   unsigned TMR5GIF:1;
@@ -1777,8 +1777,8 @@ extern volatile near struct {
   unsigned BCL2IF:1;
   unsigned SSP2IF:1;
 } PIR3bits;
-extern volatile near unsigned char       IPR3;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       IPR3;
+extern volatile /*near*/ struct {
   unsigned TMR1GIP:1;
   unsigned TMR3GIP:1;
   unsigned TMR5GIP:1;
@@ -1788,8 +1788,8 @@ extern volatile near struct {
   unsigned BCL2IP:1;
   unsigned SSP2IP:1;
 } IPR3bits;
-extern volatile near unsigned char       EECON1;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       EECON1;
+extern volatile /*near*/ struct {
   unsigned RD:1;
   unsigned WR:1;
   unsigned WREN:1;
@@ -1799,10 +1799,10 @@ extern volatile near struct {
   unsigned CFGS:1;
   unsigned EEPGD:1;
 } EECON1bits;
-extern volatile near unsigned char       EECON2;
-extern volatile near unsigned char       EEDATA;
-extern volatile near unsigned char       EEADR;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       EECON2;
+extern volatile /*near*/ unsigned char       EEDATA;
+extern volatile /*near*/ unsigned char       EEADR;
+extern volatile /*near*/ union {
   struct {
     unsigned EEADR:8;
   };
@@ -1817,8 +1817,8 @@ extern volatile near union {
     unsigned EEADR7:1;
   };
 } EEADRbits;
-extern volatile near unsigned char       RC1STA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RC1STA;
+extern volatile /*near*/ union {
   struct {
     unsigned RX9D:1;
     unsigned OERR:1;
@@ -1844,8 +1844,8 @@ extern volatile near union {
     unsigned SPEN1:1;
   };
 } RC1STAbits;
-extern volatile near unsigned char       RCSTA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RCSTA;
+extern volatile /*near*/ union {
   struct {
     unsigned RX9D:1;
     unsigned OERR:1;
@@ -1871,8 +1871,8 @@ extern volatile near union {
     unsigned SPEN1:1;
   };
 } RCSTAbits;
-extern volatile near unsigned char       RCSTA1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RCSTA1;
+extern volatile /*near*/ union {
   struct {
     unsigned RX9D:1;
     unsigned OERR:1;
@@ -1898,8 +1898,8 @@ extern volatile near union {
     unsigned SPEN1:1;
   };
 } RCSTA1bits;
-extern volatile near unsigned char       TX1STA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TX1STA;
+extern volatile /*near*/ union {
   struct {
     unsigned TX9D:1;
     unsigned TRMT:1;
@@ -1921,8 +1921,8 @@ extern volatile near union {
     unsigned CSRC1:1;
   };
 } TX1STAbits;
-extern volatile near unsigned char       TXSTA;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TXSTA;
+extern volatile /*near*/ union {
   struct {
     unsigned TX9D:1;
     unsigned TRMT:1;
@@ -1944,8 +1944,8 @@ extern volatile near union {
     unsigned CSRC1:1;
   };
 } TXSTAbits;
-extern volatile near unsigned char       TXSTA1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TXSTA1;
+extern volatile /*near*/ union {
   struct {
     unsigned TX9D:1;
     unsigned TRMT:1;
@@ -1967,8 +1967,8 @@ extern volatile near union {
     unsigned CSRC1:1;
   };
 } TXSTA1bits;
-extern volatile near unsigned char       TX1REG;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TX1REG;
+extern volatile /*near*/ union {
   struct {
     unsigned TX1REG:8;
   };
@@ -1976,8 +1976,8 @@ extern volatile near union {
     unsigned TXREG:8;
   };
 } TX1REGbits;
-extern volatile near unsigned char       TXREG;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TXREG;
+extern volatile /*near*/ union {
   struct {
     unsigned TX1REG:8;
   };
@@ -1985,8 +1985,8 @@ extern volatile near union {
     unsigned TXREG:8;
   };
 } TXREGbits;
-extern volatile near unsigned char       TXREG1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TXREG1;
+extern volatile /*near*/ union {
   struct {
     unsigned TX1REG:8;
   };
@@ -1994,8 +1994,8 @@ extern volatile near union {
     unsigned TXREG:8;
   };
 } TXREG1bits;
-extern volatile near unsigned char       RC1REG;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RC1REG;
+extern volatile /*near*/ union {
   struct {
     unsigned RC1REG:8;
   };
@@ -2003,8 +2003,8 @@ extern volatile near union {
     unsigned RCREG:8;
   };
 } RC1REGbits;
-extern volatile near unsigned char       RCREG;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RCREG;
+extern volatile /*near*/ union {
   struct {
     unsigned RC1REG:8;
   };
@@ -2012,8 +2012,8 @@ extern volatile near union {
     unsigned RCREG:8;
   };
 } RCREGbits;
-extern volatile near unsigned char       RCREG1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       RCREG1;
+extern volatile /*near*/ union {
   struct {
     unsigned RC1REG:8;
   };
@@ -2021,8 +2021,8 @@ extern volatile near union {
     unsigned RCREG:8;
   };
 } RCREG1bits;
-extern volatile near unsigned char       SP1BRG;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SP1BRG;
+extern volatile /*near*/ union {
   struct {
     unsigned SP1BRG:8;
   };
@@ -2030,8 +2030,8 @@ extern volatile near union {
     unsigned SPBRG:8;
   };
 } SP1BRGbits;
-extern volatile near unsigned char       SPBRG;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SPBRG;
+extern volatile /*near*/ union {
   struct {
     unsigned SP1BRG:8;
   };
@@ -2039,8 +2039,8 @@ extern volatile near union {
     unsigned SPBRG:8;
   };
 } SPBRGbits;
-extern volatile near unsigned char       SPBRG1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SPBRG1;
+extern volatile /*near*/ union {
   struct {
     unsigned SP1BRG:8;
   };
@@ -2048,8 +2048,8 @@ extern volatile near union {
     unsigned SPBRG:8;
   };
 } SPBRG1bits;
-extern volatile near unsigned char       SP1BRGH;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SP1BRGH;
+extern volatile /*near*/ union {
   struct {
     unsigned SP1BRGH:8;
   };
@@ -2057,8 +2057,8 @@ extern volatile near union {
     unsigned SPBRGH:8;
   };
 } SP1BRGHbits;
-extern volatile near unsigned char       SPBRGH;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SPBRGH;
+extern volatile /*near*/ union {
   struct {
     unsigned SP1BRGH:8;
   };
@@ -2066,8 +2066,8 @@ extern volatile near union {
     unsigned SPBRGH:8;
   };
 } SPBRGHbits;
-extern volatile near unsigned char       SPBRGH1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SPBRGH1;
+extern volatile /*near*/ union {
   struct {
     unsigned SP1BRGH:8;
   };
@@ -2075,8 +2075,8 @@ extern volatile near union {
     unsigned SPBRGH:8;
   };
 } SPBRGH1bits;
-extern volatile near unsigned char       T3CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       T3CON;
+extern volatile /*near*/ union {
   struct {
     unsigned TMR3ON:1;
     unsigned T3RD16:1;
@@ -2094,10 +2094,10 @@ extern volatile near union {
     unsigned TMR3CS1:1;
   };
 } T3CONbits;
-extern volatile near unsigned char       TMR3L;
-extern volatile near unsigned char       TMR3H;
-extern volatile near unsigned char       T3GCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TMR3L;
+extern volatile /*near*/ unsigned char       TMR3H;
+extern volatile /*near*/ unsigned char       T3GCON;
+extern volatile /*near*/ union {
   struct {
     unsigned T3GSS:2;
     unsigned T3GVAL:1;
@@ -2118,8 +2118,8 @@ extern volatile near union {
     unsigned T3GGO:1;
   };
 } T3GCONbits;
-extern volatile near unsigned char       ECCP1AS;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       ECCP1AS;
+extern volatile /*near*/ union {
   struct {
     unsigned P1SSBD:2;
     unsigned P1SSAC:2;
@@ -2161,8 +2161,8 @@ extern volatile near union {
     unsigned ECCPAS2:1;
   };
 } ECCP1ASbits;
-extern volatile near unsigned char       ECCPAS;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       ECCPAS;
+extern volatile /*near*/ union {
   struct {
     unsigned P1SSBD:2;
     unsigned P1SSAC:2;
@@ -2204,8 +2204,8 @@ extern volatile near union {
     unsigned ECCPAS2:1;
   };
 } ECCPASbits;
-extern volatile near unsigned char       PWM1CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PWM1CON;
+extern volatile /*near*/ union {
   struct {
     unsigned P1DC:7;
     unsigned P1RSEN:1;
@@ -2233,8 +2233,8 @@ extern volatile near union {
     unsigned PDC6:1;
   };
 } PWM1CONbits;
-extern volatile near unsigned char       PWMCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PWMCON;
+extern volatile /*near*/ union {
   struct {
     unsigned P1DC:7;
     unsigned P1RSEN:1;
@@ -2262,8 +2262,8 @@ extern volatile near union {
     unsigned PDC6:1;
   };
 } PWMCONbits;
-extern volatile near unsigned char       BAUD1CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       BAUD1CON;
+extern volatile /*near*/ union {
   struct {
     unsigned ABDEN:1;
     unsigned WUE:1;
@@ -2279,8 +2279,8 @@ extern volatile near union {
     unsigned SCKP:1;
   };
 } BAUD1CONbits;
-extern volatile near unsigned char       BAUDCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       BAUDCON;
+extern volatile /*near*/ union {
   struct {
     unsigned ABDEN:1;
     unsigned WUE:1;
@@ -2296,8 +2296,8 @@ extern volatile near union {
     unsigned SCKP:1;
   };
 } BAUDCONbits;
-extern volatile near unsigned char       BAUDCON1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       BAUDCON1;
+extern volatile /*near*/ union {
   struct {
     unsigned ABDEN:1;
     unsigned WUE:1;
@@ -2313,8 +2313,8 @@ extern volatile near union {
     unsigned SCKP:1;
   };
 } BAUDCON1bits;
-extern volatile near unsigned char       BAUDCTL;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       BAUDCTL;
+extern volatile /*near*/ union {
   struct {
     unsigned ABDEN:1;
     unsigned WUE:1;
@@ -2330,24 +2330,24 @@ extern volatile near union {
     unsigned SCKP:1;
   };
 } BAUDCTLbits;
-extern volatile near unsigned char       PSTR1CON;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PSTR1CON;
+extern volatile /*near*/ struct {
   unsigned STR1A:1;
   unsigned STR1B:1;
   unsigned STR1C:1;
   unsigned STR1D:1;
   unsigned STR1SYNC:1;
 } PSTR1CONbits;
-extern volatile near unsigned char       PSTRCON;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       PSTRCON;
+extern volatile /*near*/ struct {
   unsigned STR1A:1;
   unsigned STR1B:1;
   unsigned STR1C:1;
   unsigned STR1D:1;
   unsigned STR1SYNC:1;
 } PSTRCONbits;
-extern volatile near unsigned char       T2CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       T2CON;
+extern volatile /*near*/ union {
   struct {
     unsigned T2CKPS:2;
     unsigned TMR2ON:1;
@@ -2363,10 +2363,10 @@ extern volatile near union {
     unsigned T2OUTPS3:1;
   };
 } T2CONbits;
-extern volatile near unsigned char       PR2;
-extern volatile near unsigned char       TMR2;
-extern volatile near unsigned char       CCP1CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       PR2;
+extern volatile /*near*/ unsigned char       TMR2;
+extern volatile /*near*/ unsigned char       CCP1CON;
+extern volatile /*near*/ union {
   struct {
     unsigned CCP1M:4;
     unsigned DC1B:2;
@@ -2383,11 +2383,11 @@ extern volatile near union {
     unsigned P1M1:1;
   };
 } CCP1CONbits;
-extern volatile near unsigned            CCPR1;
-extern volatile near unsigned char       CCPR1L;
-extern volatile near unsigned char       CCPR1H;
-extern volatile near unsigned char       ADCON2;
-extern volatile near union {
+extern volatile /*near*/ unsigned            CCPR1;
+extern volatile /*near*/ unsigned char       CCPR1L;
+extern volatile /*near*/ unsigned char       CCPR1H;
+extern volatile /*near*/ unsigned char       ADCON2;
+extern volatile /*near*/ union {
   struct {
     unsigned ADCS:3;
     unsigned ACQT:3;
@@ -2403,8 +2403,8 @@ extern volatile near union {
     unsigned ACQT2:1;
   };
 } ADCON2bits;
-extern volatile near unsigned char       ADCON1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       ADCON1;
+extern volatile /*near*/ union {
   struct {
     unsigned NVCFG:2;
     unsigned PVCFG:2;
@@ -2418,8 +2418,8 @@ extern volatile near union {
     unsigned PVCFG1:1;
   };
 } ADCON1bits;
-extern volatile near unsigned char       ADCON0;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       ADCON0;
+extern volatile /*near*/ union {
   struct {
     unsigned ADON:1;
     unsigned GO_NOT_DONE:1;
@@ -2447,11 +2447,11 @@ extern volatile near union {
     unsigned GO_DONE:1;
   };
 } ADCON0bits;
-extern volatile near unsigned            ADRES;
-extern volatile near unsigned char       ADRESL;
-extern volatile near unsigned char       ADRESH;
-extern volatile near unsigned char       SSP1CON2;
-extern volatile near struct {
+extern volatile /*near*/ unsigned            ADRES;
+extern volatile /*near*/ unsigned char       ADRESL;
+extern volatile /*near*/ unsigned char       ADRESH;
+extern volatile /*near*/ unsigned char       SSP1CON2;
+extern volatile /*near*/ struct {
   unsigned SEN:1;
   unsigned RSEN:1;
   unsigned PEN:1;
@@ -2461,8 +2461,8 @@ extern volatile near struct {
   unsigned ACKSTAT:1;
   unsigned GCEN:1;
 } SSP1CON2bits;
-extern volatile near unsigned char       SSPCON2;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSPCON2;
+extern volatile /*near*/ struct {
   unsigned SEN:1;
   unsigned RSEN:1;
   unsigned PEN:1;
@@ -2472,8 +2472,8 @@ extern volatile near struct {
   unsigned ACKSTAT:1;
   unsigned GCEN:1;
 } SSPCON2bits;
-extern volatile near unsigned char       SSP1CON1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP1CON1;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPM:4;
     unsigned CKP:1;
@@ -2488,8 +2488,8 @@ extern volatile near union {
     unsigned SSPM3:1;
   };
 } SSP1CON1bits;
-extern volatile near unsigned char       SSPCON1;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSPCON1;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPM:4;
     unsigned CKP:1;
@@ -2504,8 +2504,8 @@ extern volatile near union {
     unsigned SSPM3:1;
   };
 } SSPCON1bits;
-extern volatile near unsigned char       SSP1STAT;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP1STAT;
+extern volatile /*near*/ union {
   struct {
     unsigned BF:1;
     unsigned UA:1;
@@ -2547,8 +2547,8 @@ extern volatile near union {
     unsigned NOT_ADDRESS:1;
   };
 } SSP1STATbits;
-extern volatile near unsigned char       SSPSTAT;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSPSTAT;
+extern volatile /*near*/ union {
   struct {
     unsigned BF:1;
     unsigned UA:1;
@@ -2590,8 +2590,8 @@ extern volatile near union {
     unsigned NOT_ADDRESS:1;
   };
 } SSPSTATbits;
-extern volatile near unsigned char       SSP1ADD;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP1ADD;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPADD:8;
   };
@@ -2599,8 +2599,8 @@ extern volatile near union {
     unsigned SSP1ADD:8;
   };
 } SSP1ADDbits;
-extern volatile near unsigned char       SSPADD;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSPADD;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPADD:8;
   };
@@ -2608,8 +2608,8 @@ extern volatile near union {
     unsigned SSP1ADD:8;
   };
 } SSPADDbits;
-extern volatile near unsigned char       SSP1BUF;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSP1BUF;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPBUF:8;
   };
@@ -2617,8 +2617,8 @@ extern volatile near union {
     unsigned SSP1BUF:8;
   };
 } SSP1BUFbits;
-extern volatile near unsigned char       SSPBUF;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       SSPBUF;
+extern volatile /*near*/ union {
   struct {
     unsigned SSPBUF:8;
   };
@@ -2626,8 +2626,8 @@ extern volatile near union {
     unsigned SSP1BUF:8;
   };
 } SSPBUFbits;
-extern volatile near unsigned char       SSP1MSK;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSP1MSK;
+extern volatile /*near*/ struct {
   unsigned MSK0:1;
   unsigned MSK1:1;
   unsigned MSK2:1;
@@ -2637,8 +2637,8 @@ extern volatile near struct {
   unsigned MSK6:1;
   unsigned MSK7:1;
 } SSP1MSKbits;
-extern volatile near unsigned char       SSPMSK;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSPMSK;
+extern volatile /*near*/ struct {
   unsigned MSK0:1;
   unsigned MSK1:1;
   unsigned MSK2:1;
@@ -2648,8 +2648,8 @@ extern volatile near struct {
   unsigned MSK6:1;
   unsigned MSK7:1;
 } SSPMSKbits;
-extern volatile near unsigned char       SSP1CON3;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSP1CON3;
+extern volatile /*near*/ struct {
   unsigned DHEN:1;
   unsigned AHEN:1;
   unsigned SBCDE:1;
@@ -2659,8 +2659,8 @@ extern volatile near struct {
   unsigned PCIE:1;
   unsigned ACKTIM:1;
 } SSP1CON3bits;
-extern volatile near unsigned char       SSPCON3;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       SSPCON3;
+extern volatile /*near*/ struct {
   unsigned DHEN:1;
   unsigned AHEN:1;
   unsigned SBCDE:1;
@@ -2670,8 +2670,8 @@ extern volatile near struct {
   unsigned PCIE:1;
   unsigned ACKTIM:1;
 } SSPCON3bits;
-extern volatile near unsigned char       T1GCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       T1GCON;
+extern volatile /*near*/ union {
   struct {
     unsigned T1GSS:2;
     unsigned T1GVAL:1;
@@ -2692,8 +2692,8 @@ extern volatile near union {
     unsigned T1GGO:1;
   };
 } T1GCONbits;
-extern volatile near unsigned char       T1CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       T1CON;
+extern volatile /*near*/ union {
   struct {
     unsigned TMR1ON:1;
     unsigned T1RD16:1;
@@ -2713,10 +2713,10 @@ extern volatile near union {
     unsigned TMR1CS1:1;
   };
 } T1CONbits;
-extern volatile near unsigned char       TMR1L;
-extern volatile near unsigned char       TMR1H;
-extern volatile near unsigned char       RCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       TMR1L;
+extern volatile /*near*/ unsigned char       TMR1H;
+extern volatile /*near*/ unsigned char       RCON;
+extern volatile /*near*/ union {
   struct {
     unsigned NOT_BOR:1;
     unsigned NOT_POR:1;
@@ -2735,8 +2735,8 @@ extern volatile near union {
     unsigned RI:1;
   };
 } RCONbits;
-extern volatile near unsigned char       WDTCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       WDTCON;
+extern volatile /*near*/ union {
   struct {
     unsigned SWDTEN:1;
   };
@@ -2744,8 +2744,8 @@ extern volatile near union {
     unsigned SWDTE:1;
   };
 } WDTCONbits;
-extern volatile near unsigned char       OSCCON2;
-extern volatile near struct {
+extern volatile /*near*/ unsigned char       OSCCON2;
+extern volatile /*near*/ struct {
   unsigned LFIOFS:1;
   unsigned MFIOFS:1;
   unsigned PRISD:1;
@@ -2755,8 +2755,8 @@ extern volatile near struct {
   unsigned SOSCRUN:1;
   unsigned PLLRDY:1;
 } OSCCON2bits;
-extern volatile near unsigned char       OSCCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       OSCCON;
+extern volatile /*near*/ union {
   struct {
     unsigned SCS:2;
     unsigned HFIOFS:1;
@@ -2774,8 +2774,8 @@ extern volatile near union {
     unsigned IRCF2:1;
   };
 } OSCCONbits;
-extern volatile near unsigned char       T0CON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       T0CON;
+extern volatile /*near*/ union {
   struct {
     unsigned T0PS:3;
     unsigned PSA:1;
@@ -2790,45 +2790,45 @@ extern volatile near union {
     unsigned T0PS2:1;
   };
 } T0CONbits;
-extern volatile near unsigned char       TMR0L;
-extern volatile near unsigned char       TMR0H;
-extern          near unsigned char       STATUS;
-extern          near struct {
+extern volatile /*near*/ unsigned char       TMR0L;
+extern volatile /*near*/ unsigned char       TMR0H;
+extern          /*near*/ unsigned char       STATUS;
+extern          /*near*/ struct {
   unsigned C:1;
   unsigned DC:1;
   unsigned Z:1;
   unsigned OV:1;
   unsigned N:1;
 } STATUSbits;
-extern          near unsigned            FSR2;
-extern          near unsigned char       FSR2L;
-extern          near unsigned char       FSR2H;
-extern volatile near unsigned char       PLUSW2;
-extern volatile near unsigned char       PREINC2;
-extern volatile near unsigned char       POSTDEC2;
-extern volatile near unsigned char       POSTINC2;
-extern          near unsigned char       INDF2;
-extern          near unsigned char       BSR;
-extern          near unsigned            FSR1;
-extern          near unsigned char       FSR1L;
-extern          near unsigned char       FSR1H;
-extern volatile near unsigned char       PLUSW1;
-extern volatile near unsigned char       PREINC1;
-extern volatile near unsigned char       POSTDEC1;
-extern volatile near unsigned char       POSTINC1;
-extern          near unsigned char       INDF1;
-extern          near unsigned char       W;
-extern          near unsigned char       WREG;
-extern          near unsigned            FSR0;
-extern          near unsigned char       FSR0L;
-extern          near unsigned char       FSR0H;
-extern volatile near unsigned char       PLUSW0;
-extern volatile near unsigned char       PREINC0;
-extern volatile near unsigned char       POSTDEC0;
-extern volatile near unsigned char       POSTINC0;
-extern          near unsigned char       INDF0;
-extern volatile near unsigned char       INTCON3;
-extern volatile near union {
+extern          /*near*/ unsigned            FSR2;
+extern          /*near*/ unsigned char       FSR2L;
+extern          /*near*/ unsigned char       FSR2H;
+extern volatile /*near*/ unsigned char       PLUSW2;
+extern volatile /*near*/ unsigned char       PREINC2;
+extern volatile /*near*/ unsigned char       POSTDEC2;
+extern volatile /*near*/ unsigned char       POSTINC2;
+extern          /*near*/ unsigned char       INDF2;
+extern          /*near*/ unsigned char       BSR;
+extern          /*near*/ unsigned            FSR1;
+extern          /*near*/ unsigned char       FSR1L;
+extern          /*near*/ unsigned char       FSR1H;
+extern volatile /*near*/ unsigned char       PLUSW1;
+extern volatile /*near*/ unsigned char       PREINC1;
+extern volatile /*near*/ unsigned char       POSTDEC1;
+extern volatile /*near*/ unsigned char       POSTINC1;
+extern          /*near*/ unsigned char       INDF1;
+extern          /*near*/ unsigned char       W;
+extern          /*near*/ unsigned char       WREG;
+extern          /*near*/ unsigned            FSR0;
+extern          /*near*/ unsigned char       FSR0L;
+extern          /*near*/ unsigned char       FSR0H;
+extern volatile /*near*/ unsigned char       PLUSW0;
+extern volatile /*near*/ unsigned char       PREINC0;
+extern volatile /*near*/ unsigned char       POSTDEC0;
+extern volatile /*near*/ unsigned char       POSTINC0;
+extern          /*near*/ unsigned char       INDF0;
+extern volatile /*near*/ unsigned char       INTCON3;
+extern volatile /*near*/ union {
   struct {
     unsigned INT1IF:1;
     unsigned INT2IF:1;
@@ -2850,8 +2850,8 @@ extern volatile near union {
     unsigned INT2P:1;
   };
 } INTCON3bits;
-extern volatile near unsigned char       INTCON2;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       INTCON2;
+extern volatile /*near*/ union {
   struct {
     unsigned RBIP:1;
     unsigned :1;
@@ -2867,8 +2867,8 @@ extern volatile near union {
     unsigned RBPU:1;
   };
 } INTCON2bits;
-extern volatile near unsigned char       INTCON;
-extern volatile near union {
+extern volatile /*near*/ unsigned char       INTCON;
+extern volatile /*near*/ union {
   struct {
     unsigned RBIF:1;
     unsigned INT0IF:1;
@@ -2895,23 +2895,23 @@ extern volatile near union {
     unsigned GIEH:1;
   };
 } INTCONbits;
-extern          near unsigned            PROD;
-extern          near unsigned char       PRODL;
-extern          near unsigned char       PRODH;
-extern volatile near unsigned char       TABLAT;
-extern volatile near unsigned short long TBLPTR;
-extern volatile near unsigned char       TBLPTRL;
-extern volatile near unsigned char       TBLPTRH;
-extern volatile near unsigned char       TBLPTRU;
-extern volatile near struct {
+extern          /*near*/ unsigned            PROD;
+extern          /*near*/ unsigned char       PRODL;
+extern          /*near*/ unsigned char       PRODH;
+extern volatile /*near*/ unsigned char       TABLAT;
+extern volatile /*near*/ unsigned /*short*/ long TBLPTR;
+extern volatile /*near*/ unsigned char       TBLPTRL;
+extern volatile /*near*/ unsigned char       TBLPTRH;
+extern volatile /*near*/ unsigned char       TBLPTRU;
+extern volatile /*near*/ struct {
   unsigned TBLPTRU:6;
 } TBLPTRUbits;
-extern volatile near unsigned short long PC;
-extern volatile near unsigned char       PCL;
-extern volatile near unsigned char       PCLATH;
-extern volatile near unsigned char       PCLATU;
-extern volatile near unsigned char       STKPTR;
-extern volatile near union {
+extern volatile /*near*/ unsigned /*short*/ long PC;
+extern volatile /*near*/ unsigned char       PCL;
+extern volatile /*near*/ unsigned char       PCLATH;
+extern volatile /*near*/ unsigned char       PCLATU;
+extern volatile /*near*/ unsigned char       STKPTR;
+extern volatile /*near*/ union {
   struct {
     unsigned STKPTR:5;
     unsigned :1;
@@ -2935,10 +2935,10 @@ extern volatile near union {
     unsigned SP4:1;
   };
 } STKPTRbits;
-extern          near unsigned short long TOS;
-extern          near unsigned char       TOSL;
-extern          near unsigned char       TOSH;
-extern          near unsigned char       TOSU;
+extern          /*near*/ unsigned /*short*/ long TOS;
+extern          /*near*/ unsigned char       TOSL;
+extern          /*near*/ unsigned char       TOSH;
+extern          /*near*/ unsigned char       TOSU;
 
 #pragma varlocate 15 ANSELA
 #pragma varlocate 15 ANSELAbits
@@ -3036,7 +3036,7 @@ extern          near unsigned char       TOSU;
  * Some useful macros for inline assembly stuff
  *-------------------------------------------------------------------------*/
 #define Nop()    {_asm nop _endasm}
-#define ClrWdt() {_asm clrwdt _endasm}
+#define ClrWdt/*()*/ {asm("clrwdt")}
 #define Sleep()  {_asm sleep _endasm}
 #define Reset()  {_asm reset _endasm}
 
